@@ -1,6 +1,8 @@
 <?php 
 $par = $_GET["paragraph"];
-echo $par;
+$badword = $_GET["badword"];
+
+$censure_par = str_replace($badword, "***", $par);
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +14,17 @@ echo $par;
 </head>
 <body>
     <a href="index.php">Torna indietro</a>
-    <?php ?>
+    <section>
+        <h2>Paragrafo Normale: </h2>
+        <p><?php echo $par; ?></p>
+        <h5>Lunghezza: <?php echo strlen($par);?></h5>
+    </section>
+
+    <section>
+        <h2>Paragrafo Censurato: </h2>
+        <p><?php echo $censure_par; ?></p>
+        <h5>Lunghezza: <?php echo strlen($censure_par);?></h5>
+    </section>
+
 </body>
 </html>
