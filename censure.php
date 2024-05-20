@@ -1,3 +1,8 @@
+<?php 
+$par = $_GET["paragraph"];
+echo $par;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="censure.php" method="GET">
-        <input type="textarea" name="paragraph">
-        <button type="submit">Invia</button>
-    </form>
+    <a href="index.php">Torna indietro</a>
+    <?php ?>
 </body>
 </html>
